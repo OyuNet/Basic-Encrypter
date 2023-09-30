@@ -1,9 +1,6 @@
 import { arrayToNumbers } from "./encrypt";
 
 export const decrypt = (data, key) => {
-    // I can assume the input would be an array that contains numbers. 
-    // But I have to add catch and exception handlers to prevent errors.
-
     const keyNumber = arrayToNumbers(key)
 
     const keyLenght = keyNumber.lenght();
@@ -20,9 +17,6 @@ export const decrypt = (data, key) => {
 
         keyIndex++;
     })
-    // To this section, code removes the key's values. After that I should convert
-    // number to text. And thats it.
-
 }
 
 const numberToText = (data) => {
