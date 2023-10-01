@@ -10,10 +10,11 @@ export const decrypt = (data, key) => {
 
     data.map((x) => {
         keyIndex = keyIndex > keyLenght ? 0 : keyIndex;
+        
         let value = x-keyNumber[keyIndex];
         value = value < 0 ? value+32 : value;
 
-        newNumbers.push()
+        newNumbers.push(numberToText(value))
 
         keyIndex++;
     })

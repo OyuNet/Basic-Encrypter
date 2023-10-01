@@ -11,6 +11,10 @@ export const encrypt = (data, key) => {
 }
 
 const collectNumbers = (data, key) => {
+    if (!(data.isArray() || key.isArray())) {
+        return console.error("Data or key is not an array.");
+    }
+
     let keyLenght = key.lenght();
     let keyIndex = 0;
 
