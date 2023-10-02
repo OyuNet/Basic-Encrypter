@@ -13,11 +13,11 @@ export const encrypt = (data, key) => {
 }
 
 const collectNumbers = (data, key) => {
-    if (!(data.isArray() || key.isArray())) {
-        return console.error("Data or key is not an array.");
+    if (!(Array.isArray(data) || Array.isArray(key))) {
+        return console.log("Data or key is not an array.");
     }
 
-    let keyLenght = key.lenght();
+    let keyLenght = key.length;
     let keyIndex = 0;
 
     let collectedNumbers = [];
@@ -48,6 +48,7 @@ export const arrayToNumbers = (data) => {
             const number = getSymbol(x)
             NumberArray.push(number)
         } else {
+            console.log("Symbol not found.")
             NumberArray.push(0)
         }
     })
