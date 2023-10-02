@@ -1,0 +1,34 @@
+import { addSymbol } from "./db.js";
+
+addSymbol("a", 1)
+addSymbol("b", 2);
+addSymbol("c", 3);
+addSymbol("ç", 4);
+addSymbol("d", 5);
+addSymbol("e", 6);
+addSymbol("f", 7);
+addSymbol("g", 8);
+addSymbol("ğ", 9);
+addSymbol("h", 10);
+addSymbol("ı", 11);
+addSymbol("i", 12);
+addSymbol("j", 13);
+addSymbol("k", 14);
+addSymbol("l", 15);
+addSymbol("m", 16);
+addSymbol("n", 17);
+addSymbol("o", 18);
+addSymbol("ö", 19);
+addSymbol("p", 20);
+addSymbol("r", 21);
+addSymbol("s", 22);
+addSymbol("ş", 23);
+addSymbol("t", 24);
+addSymbol("u", 25);
+addSymbol("ü", 26);
+addSymbol("v", 27);
+addSymbol("y", 28);
+addSymbol("z", 29);
+addSymbol("w", 30);
+addSymbol("q", 31);
+addSymbol("x", 32);

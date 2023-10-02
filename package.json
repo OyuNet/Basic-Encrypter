@@ -1,5 +1,7 @@
 {
+  "type": "module",
   "dependencies": {
+    "better-sqlite3": "^8.7.0",
     "quick.db": "^9.1.7"
   }
 }
