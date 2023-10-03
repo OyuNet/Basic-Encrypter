@@ -1,6 +1,6 @@
 import { checkSymbol, getSymbol } from "./db.js";
 
-export const encrypt = (data, key) => {
+export const encrypt = async (data, key) => {
     const keyArray = key.split("");
     const dataArray = data.split("");
 
@@ -19,7 +19,7 @@ export const encrypt = (data, key) => {
     return finalValue;
 }
 
-const collectNumbers = (data, key) => {
+const collectNumbers = async (data, key) => {
     if (!(Array.isArray(data) || Array.isArray(key))) {
         return console.log("Data or key is not an array.");
     }
@@ -47,10 +47,10 @@ const collectNumbers = (data, key) => {
     return collectedNumbers;
 }
 
-export const arrayToNumbers = (data) => {
+export const arrayToNumbers = async (data) => {
     let NumberArray = [];
 
-    data.map((x) => {
+    await data.map((x) => {
         if (checkSymbol(x)) {
             const number = getSymbol(x)
             NumberArray.push(number)
