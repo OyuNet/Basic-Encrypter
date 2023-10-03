@@ -57,9 +57,15 @@ const shuffleNumbers = (data, key) => {
     // Just a reminder. Data is collected number array. So I just use this for shuffling.
 
     const keyLength = key.length
+    const dataLength = data.length
     let indexNum = 0;
+    let multiplier = 1;
+    if (dataLength < keyLength) {
+        console.log("Data is shorter than key. So shuffle operation will be cancelled.")
+        return newArray;
+    }
 
-    if (isEven(keyLength)) {
+    if (isEven(keyLength)) { // Çiftse
         const stopNum = keyLength/2;
 
         while (indexNum < stopNum) { // Basic swap operation.
@@ -70,7 +76,15 @@ const shuffleNumbers = (data, key) => {
             indexNum++;
         }
     } else {
+        const stopNum = keyLength/2 - 0.5;
 
+        while(indexNum >= stopNum) {
+            let cache = newArray[indexNum];
+            newArray[indexNum] = newArray[keyLength-indexNum];
+            newArray[keyLength-indexNum] = cache;
+
+            indexNum++;
+        }
     }
 
 }
