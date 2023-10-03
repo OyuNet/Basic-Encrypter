@@ -59,7 +59,7 @@ const shuffleNumbers = (data, key) => {
     const keyLength = key.length
     const dataLength = data.length
     let indexNum = 0;
-    let multiplier = 1;
+    let multiplier = 0;
     if (dataLength < keyLength) {
         console.log("Data is shorter than key. So shuffle operation will be cancelled.")
         return newArray;
@@ -68,22 +68,31 @@ const shuffleNumbers = (data, key) => {
     if (isEven(keyLength)) { // Çiftse
         const stopNum = keyLength/2;
 
-        while (indexNum < stopNum) { // Basic swap operation.
-            let cache = newArray[indexNum];
-            newArray[indexNum] = newArray[keyLength-indexNum];
-            newArray[keyLength-indexNum] = cache;
-
-            indexNum++;
+        while (multiplier*keyLength <= dataLength) {
+            while (indexNum < stopNum) { // Basic swap operation.
+                let cache = newArray[indexNum+multiplier*keyLength];
+                newArray[indexNum+multiplier*keyLength] = newArray[keyLength-indexNum+multiplier*keyLength];
+                newArray[keyLength-indexNum+multiplier*keyLength] = cache;
+    
+                indexNum++;
+            }
+            indexNum = 0;
+            multiplier++;
         }
+        
     } else {
         const stopNum = keyLength/2 - 0.5;
 
-        while(indexNum >= stopNum) {
-            let cache = newArray[indexNum];
-            newArray[indexNum] = newArray[keyLength-indexNum];
-            newArray[keyLength-indexNum] = cache;
-
-            indexNum++;
+        while (multiplier*keyLength <= dataLength) {
+            while(indexNum >= stopNum) {
+                let cache = newArray[indexNum+multiplier*keyLength];
+                newArray[indexNum+multiplier*keyLength] = newArray[keyLength-indexNum+multiplier*keyLength];
+                newArray[keyLength-indexNum+multiplier*keyLength] = cache;
+    
+                indexNum++;
+            }
+            indexNum = 0;
+            multiplier++;
         }
     }
 
