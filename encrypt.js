@@ -60,9 +60,19 @@ const shuffleNumbers = (data, key) => {
     const dataLength = data.length
     let indexNum = 0;
     let multiplier = 0;
-    if (dataLength < keyLength) {
-        console.log("Data is shorter than key. So shuffle operation will be cancelled.")
-        return newArray;
+    if (dataLength < keyLength) { // Direkt olarak 1.yle sonuncu... şeklinde değiştirilecek.
+        if (isEven(dataLength)) { // 0, 1, 2, 3
+            const stopNum = dataLength/2-0.5;
+            while (indexNum <= stopNum) {
+                let cache = newArray[indexNum];
+                newArray[indexNum] = newArray[dataLength-indexNum];
+                newArray[dataLength-indexNum] = cache;
+            }
+
+            return newArray;
+        } else {
+
+        }
     }
 
     if (isEven(keyLength)) { // Çiftse
@@ -79,6 +89,8 @@ const shuffleNumbers = (data, key) => {
             indexNum = 0;
             multiplier++;
         }
+
+        return newArray;
         
     } else {
         const stopNum = keyLength/2 - 0.5;
@@ -94,6 +106,8 @@ const shuffleNumbers = (data, key) => {
             indexNum = 0;
             multiplier++;
         }
+
+        return newArray;
     }
 
 }
