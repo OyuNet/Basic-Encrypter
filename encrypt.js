@@ -47,6 +47,39 @@ const collectNumbers = async (data, key) => {
     return collectedNumbers;
 }
 
+const shuffleNumbers = (data, key) => {
+    if (!(Array.isArray(data) || Array.isArray(key))) {
+        return console.log("Data or key is not an array.")
+    }
+
+    let newArray = data;
+
+    // Just a reminder. Data is collected number array. So I just use this for shuffling.
+
+    const keyLength = key.length
+    let indexNum = 0;
+
+    if (isEven(keyLength)) {
+        const stopNum = keyLength/2;
+
+        while (indexNum < stopNum) { // Basic swap operation.
+            let cache = newArray[indexNum];
+            newArray[indexNum] = newArray[keyLength-indexNum];
+            newArray[keyLength-indexNum] = cache;
+
+            indexNum++;
+        }
+    } else {
+
+    }
+
+}
+
+const isEven = (number) => {
+    const status = number % 2 == 0 ? status = true : status = false;
+    return status;
+}
+
 export const arrayToNumbers = async (data) => {
     let NumberArray = [];
 
