@@ -4,11 +4,18 @@ export const encrypt = (data, key) => {
     const keyArray = key.split("");
     const dataArray = data.split("");
 
+    console.log("values splitted")
+
     const keyNumbers = arrayToNumbers(keyArray);
     const dataNumbers = arrayToNumbers(dataArray);
 
+    console.log("data and key has been converted to number arrays.")
+
     const finalValue = collectNumbers(dataNumbers, keyNumbers);
 
+    console.log("two array has been merged")
+
+    console.log(finalValue)
     return finalValue;
 }
 
