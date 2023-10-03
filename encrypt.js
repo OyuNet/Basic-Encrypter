@@ -47,7 +47,7 @@ const collectNumbers = async (data, key) => {
     return collectedNumbers;
 }
 
-const shuffleNumbers = (data, key) => {
+export const shuffleNumbers = (data, key) => {
     if (!(Array.isArray(data) || Array.isArray(key))) {
         return console.log("Data or key is not an array.")
     }
