@@ -24,3 +24,6 @@ Evet kırılabilir. Ama ileride daha fantastik şeyler ekleyip ciddi anlamda kı
 
 - Kırılmasını neredeyse imkansız hale getireceğim bir güncelleme.
 - Şu anki Switch/Case zımbırtısından kurtulacağım. Hadi şimdilik 32 tane karakter var. Peki ya ileride? Sürdürülebilir ve performanslı değil. Yerine daha estetik ve verileri veri setinden çeken bir güncelleme getireceğim.
+
+## Üstünde Çalıştıklarım
+- Girilen şifreye göre kırılmasını zorlaştırmak maksatlı bir güncelleme getireceğim. Plan şu, şifrenin uzunluğundaki iki value'yi yer değiştireceğim. Yani şifrenin uzunluğunu bilmeyen birisinin kırması daha da zor olacak. İleride daha da fantastik şeyler getireceğim ama şimdilik bu kadarı yeterli.
