@@ -33,6 +33,25 @@ async function kekw() {
     await addSymbol("w", 30);
     await addSymbol("q", 31);
     await addSymbol("x", 32);
+    await addSymbol(".", 33);
+    await addSymbol(",", 34);
+    await addSymbol(":", 35);
+    await addSymbol(";", 36);
+    await addSymbol("<", 37);
+    await addSymbol(">", 38);
+    await addSymbol("!", 39);
+    await addSymbol("'", 40);
+    await addSymbol("^", 41);
+    await addSymbol("+", 42);
+    await addSymbol("%", 43);
+    await addSymbol("&", 44);
+    await addSymbol("/", 45);
+    await addSymbol("(", 46);
+    await addSymbol(")", 47);
+    await addSymbol("=", 48);
+    await addSymbol("?", 49);
+    await addSymbol("-", 50);
+    await addSymbol("_", 51);
 }
 
 kekw();
